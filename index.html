@@ -2,2959 +2,2369 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Hafzee Infopark · IT Solutions</title>
-  <!-- Google Fonts + Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <style>
-    /* ----- RESET & BASE ----- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f9fcff;
-      color: #1e293b;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ----- BUTTONS & BADGES ----- */
-    .btn-primary {
-      background: linear-gradient(145deg, #2563eb, #1d4ed8);
-      color: #fff;
-      padding: 12px 30px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      display: inline-block;
-      box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.4);
-      transition: all 0.3s ease;
-      border: none;
-    }
-
-    .btn-primary i {
-      margin-left: 8px;
-    }
-
-    .btn-primary:hover {
-      background: linear-gradient(145deg, #1d4ed8, #1e40af);
-      transform: translateY(-3px);
-      box-shadow: 0 14px 28px -8px rgba(37, 99, 235, 0.5);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid #2563eb;
-      color: #2563eb;
-      padding: 10px 28px;
-      border-radius: 60px;
-      font-weight: 600;
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .btn-outline:hover {
-      background: #2563eb;
-      color: #fff;
-      transform: scale(1.02);
-    }
-
-    /* ----- HEADER / NAV ----- */
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-    }
-
-    .logo {
-      font-size: 1.7rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #0b2b5c, #2563eb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .logo span {
-      font-weight: 300;
-      color: #1e293b;
-      -webkit-text-fill-color: #1e293b;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      font-weight: 500;
-      align-items: center;
-    }
-
-    .nav-links a {
-      transition: 0.2s;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      color: #2563eb;
-    }
-
-    .nav-cta {
-      background: #0b2b5c;
-      color: #fff !important;
-      padding: 10px 24px;
-      border-radius: 40px;
-      font-weight: 600;
-    }
-
-    .nav-cta:hover {
-      background: #1d4ed8 !important;
-      color: #fff !important;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 1.6rem;
-      cursor: pointer;
-    }
-
-    /* ----- HERO ----- */
-    .hero {
-      padding: 60px 0 80px;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-
-    .hero-content {
-      flex: 1 1 45%;
-    }
-
-    .hero-badge {
-      background: #e6f0ff;
-      color: #1d4ed8;
-      padding: 6px 18px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 0.3px;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: 3.4rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 i {
-      color: #2563eb;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: #475569;
-      max-width: 480px;
-      margin-bottom: 32px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .hero-image {
-      flex: 1 1 45%;
-      text-align: center;
-    }
-
-    .hero-image img {
-      max-width: 100%;
-      filter: drop-shadow(0 20px 40px rgba(0, 20, 60, 0.08));
-      animation: float 6s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(-12px);
-      }
-
-      100% {
-        transform: translateY(0px);
-      }
-    }
-
-    /* ----- SECTION TITLES ----- */
-    .section-head {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    .section-head h2 {
-      font-size: 2.4rem;
-      font-weight: 700;
-    }
-
-    .section-head h2 em {
-      font-style: normal;
-      color: #2563eb;
-    }
-
-    .section-head .line {
-      width: 70px;
-      height: 4px;
-      background: linear-gradient(90deg, #2563eb, #60a5fa);
-      margin: 16px auto 20px;
-      border-radius: 4px;
-    }
-
-    .section-head p {
-      color: #64748b;
-      max-width: 660px;
-      margin: 0 auto;
-    }
-
-    /* ----- SERVICES (cards) ----- */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-    }
-
-    .service-card {
-      background: #fff;
-      padding: 32px 22px;
-      border-radius: 28px;
-      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.05);
-      transition: all 0.25s ease;
-      border: 1px solid rgba(0, 0, 0, 0.02);
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 24px 50px -16px rgba(37, 99, 235, 0.18);
-      border-color: #dbeafe;
-    }
-
-    .service-card .icon {
-      font-size: 2.6rem;
-      color: #2563eb;
-      margin-bottom: 18px;
-      display: block;
-    }
-
-    .service-card h4 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .service-card p {
-      color: #475569;
-      font-size: 0.95rem;
-    }
-
-    .service-card .link {
-      margin-top: 18px;
-      display: inline-block;
-      font-weight: 600;
-      color: #2563eb;
-    }
-
-    .service-card .link i {
-      transition: 0.2s;
-    }
-
-    .service-card .link:hover i {
-      transform: translateX(6px);
-    }
-
-    /* ----- ABOUT (double column) ----- */
-    .about-wrap {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-      flex-wrap: wrap;
-      margin: 40px 0 20px;
-    }
-
-    .about-text {
-      flex: 1 1 50%;
-    }
-
-    .about-text h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .about-text h3 em {
-      font-style: normal;
-      color: #2563eb;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin: 30px 0 20px;
-    }
-
-    .about-item {
-      background: #fff;
-      padding: 18px 20px;
-      border-radius: 20px;
-      border-left: 5px solid #2563eb;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-    }
-
-    .about-item h4 {
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    .about-item p {
-      color: #475569;
-      font-size: 0.9rem;
-      margin-top: 4px;
-    }
-
-    .about-image {
-      flex: 1 1 40%;
-      text-align: center;
-    }
-
-    .about-image img {
-      max-width: 100%;
-    }
-
-    /* ----- PRICING ----- */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      margin-top: 20px;
-    }
-
-    .pricing-card {
-      background: #fff;
-      padding: 32px 24px;
-      border-radius: 32px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
-      border: 1px solid #f1f5f9;
-      transition: 0.25s;
-      text-align: center;
-    }
-
-    .pricing-card.popular {
-      border: 2px solid #2563eb;
-      background: #f8fcff;
-    }
-
-    .pricing-card .price {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #0b2b5c;
-    }
-
-    .pricing-card .price small {
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: #64748b;
-    }
-
-    .pricing-card h4 {
-      font-size: 1.4rem;
-      margin: 12px 0 18px;
-    }
-
-    .pricing-card ul {
-      list-style: none;
-      text-align: left;
-      margin: 20px 0;
-    }
-
-    .pricing-card ul li {
-      padding: 8px 0;
-      border-bottom: 1px solid #f1f5f9;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .pricing-card ul li i {
-      color: #2563eb;
-      width: 20px;
-    }
-
-    .pricing-card .btn-outline {
-      margin-top: 10px;
-    }
-
-    /* ----- TESTIMONIALS (simplified) ----- */
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-    }
-
-    .testimonial-card {
-      background: #fff;
-      padding: 28px 24px;
-      border-radius: 28px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
-      border: 1px solid #f1f5f9;
-    }
-
-    .testimonial-card .stars {
-      color: #f59e0b;
-      letter-spacing: 2px;
-    }
-
-    .testimonial-card p {
-      font-style: italic;
-      margin: 14px 0;
-      color: #334155;
-    }
-
-    .testimonial-card .author {
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .testimonial-card .author img {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #dbeafe;
-    }
-
-    /* ----- FOOTER / NEWSLETTER ----- */
-    .footer-cta {
-      background: #0b2b5c;
-      color: #fff;
-      padding: 60px 0 40px;
-      border-radius: 48px 48px 0 0;
-      margin-top: 60px;
-    }
-
-    .footer-cta .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .footer-cta h3 {
-      font-size: 1.8rem;
-      font-weight: 700;
-    }
-
-    .footer-cta .cta-form {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .footer-cta input {
-      padding: 14px 22px;
-      border-radius: 60px;
-      border: none;
-      min-width: 240px;
-      font-size: 1rem;
-    }
-
-    .footer-cta input:focus {
-      outline: 2px solid #60a5fa;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 50px;
-      margin: 40px 0 20px;
-    }
-
-    .footer-links h4 {
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .footer-links ul {
-      list-style: none;
-    }
-
-    .footer-links ul li {
-      margin: 8px 0;
-    }
-
-    .footer-links ul li a {
-      color: #cbd5e1;
-      transition: 0.2s;
-    }
-
-    .footer-links ul li a:hover {
-      color: #fff;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid #1e3a6b;
-      padding-top: 24px;
-      margin-top: 20px;
-      text-align: center;
-      color: #94a3b8;
-    }
-
-    /* ----- RESPONSIVE ----- */
-    @media (max-width: 992px) {
-      .hero h1 {
-        font-size: 2.8rem;
-      }
-
-      .nav-links {
-        gap: 18px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero p {
-        max-width: 100%;
-      }
-
-      .hero-actions {
-        justify-content: center;
-      }
-
-      .about-wrap {
-        flex-direction: column;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-cta .container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .section-head h2 {
-        font-size: 1.8rem;
-      }
-    }
-
-    .mobile-nav {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      padding: 20px 0;
-      border-top: 1px solid #e2e8f0;
-    }
-
-    .mobile-nav a {
-      font-weight: 500;
-    }
-
-    .hidden {
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Hafzee Infopark · IT Solutions</title>
+    <!-- Google Fonts + Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f9fcff;
+            color: #1e293b;
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary {
+            background: linear-gradient(145deg, #2563eb, #1d4ed8);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(145deg, #1d4ed8, #1e40af);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 28px -8px rgba(37, 99, 235, 0.5);
+            color: #fff;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #2563eb;
+            color: #2563eb;
+            padding: 10px 26px;
+            border-radius: 60px;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .btn-outline:hover {
+            background: #2563eb;
+            color: #fff;
+            transform: scale(1.02);
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #0b2b5c, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            flex-shrink: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-weight: 500;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            transition: 0.2s;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-cta {
+            background: #0b2b5c;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem !important;
+        }
+
+        .nav-cta:hover {
+            background: #1d4ed8 !important;
+            color: #fff !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: #1e293b;
+            padding: 4px 8px;
+            background: none;
+            border: none;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 16px 0 20px;
+            border-top: 1px solid #e2e8f0;
+            width: 100%;
+        }
+
+        .mobile-nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 6px 0;
+            display: block;
+        }
+
+        .mobile-nav a[style*="color:#2563eb"] {
+            color: #2563eb !important;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* ===== HERO ===== */
+        .hero-wrap {
+            padding: 30px 0 50px;
+        }
+
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1 1 45%;
+            min-width: 280px;
+        }
+
+        .hero-badge {
+            background: #e6f0ff;
+            color: #1d4ed8;
+            padding: 6px 18px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 0.3px;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero-content h1 i {
+            color: #2563eb;
+            font-style: normal;
+        }
+
+        .hero-content p {
+            font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+            color: #475569;
+            max-width: 480px;
+            margin-bottom: 28px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            flex: 1 1 45%;
+            min-width: 240px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            filter: drop-shadow(0 20px 40px rgba(0, 20, 60, 0.08));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-head {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 700;
+        }
+
+        .section-head h2 em {
+            font-style: normal;
+            color: #2563eb;
+        }
+
+        .section-head .line {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #60a5fa);
+            margin: 14px auto 18px;
+            border-radius: 4px;
+        }
+
+        .section-head p {
+            color: #64748b;
+            max-width: 660px;
+            margin: 0 auto;
+            font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+            padding: 0 10px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: #2563eb;
+            padding: 6px 18px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 14px;
+        }
+
+        .section-tag i {
+            margin-right: 6px;
+        }
+
+        .header-line {
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            border-radius: 4px;
+            margin: 12px auto 18px;
+        }
+
+        /* ===== SERVICES GRID (cards) ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 28px 20px;
+            border-radius: 24px;
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.05);
+            transition: all 0.25s ease;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 50px -16px rgba(37, 99, 235, 0.18);
+            border-color: #dbeafe;
+        }
+
+        .service-card .icon {
+            font-size: 2.4rem;
+            color: #2563eb;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .service-card h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #475569;
+            font-size: 0.9rem;
+        }
+
+        .service-card .link {
+            margin-top: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            color: #2563eb;
+            font-size: 0.9rem;
+        }
+
+        .service-card .link i {
+            transition: 0.2s;
+        }
+
+        .service-card .link:hover i {
+            transform: translateX(6px);
+        }
+
+        /* ===== MODERN SERVICES SECTION ===== */
+        .services-section {
+            padding: 60px 0;
+            background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-grid-modern {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .service-card-modern {
+            background: #ffffff;
+            padding: 28px 22px 24px;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .service-card-modern:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.12);
+            border-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .service-card-modern:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .service-card-modern:hover .card-icon {
+            transform: scale(1.05) rotate(-3deg);
+        }
+
+        .card-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 0.04);
+            line-height: 1;
+            transition: color 0.3s ease;
+        }
+
+        .service-card-modern:hover .card-number {
+            color: rgba(37, 99, 235, 0.08);
+        }
+
+        .service-card-modern h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .service-card-modern p {
+            color: #64748b;
+            font-size: 0.92rem;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px 0;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #475569;
+            padding: 4px 0;
+        }
+
+        .service-features li i {
+            color: #2563eb;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            padding: 6px 0;
+        }
+
+        .service-link i {
+            transition: transform 0.3s ease;
+            font-size: 0.75rem;
+        }
+
+        .service-link:hover {
+            color: #1d4ed8;
+        }
+
+        .service-link:hover i {
+            transform: translateX(6px);
+        }
+
+        /* ===== CATEGORY CARDS (accordion) ===== */
+        .service-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .category-card {
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            user-select: none;
+            flex-wrap: wrap;
+        }
+
+        .category-header:hover {
+            background: rgba(37, 99, 235, 0.03);
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-info {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .category-info h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0 0 2px 0;
+        }
+
+        .category-info p {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .category-toggle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .category-card.active .category-toggle {
+            transform: rotate(180deg);
+        }
+
+        .category-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .category-card.active .category-content {
+            max-height: 5000px;
+            padding: 0 20px 24px;
+        }
+
+        .service-items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 14px;
+            padding: 10px 0 16px;
+        }
+
+        .research-grid {
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        }
+
+        .service-item {
+            display: flex;
+            gap: 14px;
+            padding: 14px 16px;
+            background: #f8faff;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            background: #f0f5ff;
+            border-color: rgba(37, 99, 235, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .item-icon {
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            font-size: 1rem;
+        }
+
+        .item-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .item-details h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0 0 3px 0;
+        }
+
+        .item-details p {
+            font-size: 0.82rem;
+            color: #64748b;
+            margin: 0 0 5px 0;
+            line-height: 1.5;
+        }
+
+        .item-tag {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.08);
+            color: #2563eb;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .category-cta {
+            padding-top: 14px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .module-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 8px 20px;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        .module-cta:hover {
+            background: rgba(37, 99, 235, 0.12);
+            transform: translateX(4px);
+            color: #1d4ed8;
+        }
+
+        .module-cta i {
+            transition: transform 0.3s ease;
+        }
+
+        .module-cta:hover i {
+            transform: translateX(6px);
+        }
+
+        /* ===== SERVICES CTA ===== */
+        .services-cta {
+            background: linear-gradient(135deg, #1e293b, #0b2b5c);
+            border-radius: 20px;
+            padding: 36px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            margin-top: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h3 {
+            color: #ffffff;
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .cta-content h3 span {
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-content p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(37, 99, 235, 0.4);
+            color: #fff;
+        }
+
+        .cta-button i {
+            font-size: 1rem;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-wrap {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 30px 0 20px;
+        }
+
+        .about-text {
+            flex: 1 1 50%;
+            min-width: 260px;
+        }
+
+        .about-text h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .about-text h3 em {
+            font-style: normal;
+            color: #2563eb;
+        }
+
+        .about-text>p {
+            color: #475569;
+            font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0 18px;
+        }
+
+        .about-item {
+            background: #fff;
+            padding: 16px 18px;
+            border-radius: 18px;
+            border-left: 5px solid #2563eb;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .about-item h4 {
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .about-item h4 i {
+            color: #2563eb;
+        }
+
+        .about-item p {
+            color: #475569;
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+
+        .about-image {
+            flex: 1 1 40%;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 24px 20px;
+            border-radius: 24px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f1f5f9;
+        }
+
+        .testimonial-card .stars {
+            color: #f59e0b;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin: 12px 0;
+            color: #334155;
+            font-size: 0.92rem;
+        }
+
+        .testimonial-card .author {
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-card .author img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #dbeafe;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        .testimonial-card .author>div {
+            font-size: 0.82rem;
+            line-height: 1.3;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer-cta {
+            background: linear-gradient(145deg, #0b1f3a, #0b2b5c);
+            color: #f1f5f9;
+            padding: 50px 0 24px;
+            border-radius: 40px 40px 0 0;
+            margin-top: 50px;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(8px);
+            border-radius: 28px;
+            padding: 30px 28px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
+        }
+
+        .cta-text {
+            flex: 1 1 45%;
+            min-width: 200px;
+        }
+
+        .cta-badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+            padding: 4px 16px;
+            border-radius: 60px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin-bottom: 10px;
+        }
+
+        .cta-text h3 {
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+
+        .cta-text .highlight {
+            background: linear-gradient(135deg, #60a5fa, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-text p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
+
+        .cta-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-stats div {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+        }
+
+        .cta-stats i {
+            color: #34d399;
+        }
+
+        .cta-form {
+            flex: 1 1 40%;
+            min-width: 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 60px;
+            padding: 0 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .form-group:focus-within {
+            border-color: #60a5fa;
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+        }
+
+        .input-icon {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .form-group input {
+            background: transparent;
+            border: none;
+            padding: 14px 12px;
+            color: #f1f5f9;
+            font-size: 0.95rem;
+            width: 100%;
+            outline: none;
+            min-width: 0;
+        }
+
+        .form-group input::placeholder {
+            color: #94a3b8;
+        }
+
+        .btn-glow {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 16px 36px rgba(37, 99, 235, 0.5);
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: #fff;
+        }
+
+        .form-note {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 24px 0 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .footer-col {
+            flex: 1 1 140px;
+            min-width: 140px;
+        }
+
+        .footer-col h4 {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #f1f5f9;
+        }
+
+        .footer-col h4 i {
+            color: #60a5fa;
+            font-size: 0.85rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin: 8px 0;
+        }
+
+        .footer-col ul li a {
+            color: #cbd5e1;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+        }
+
+        .footer-col ul li a i {
+            font-size: 0.45rem;
+            color: #60a5fa;
+            transition: 0.2s;
+            flex-shrink: 0;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-col ul li a:hover i {
+            transform: translateX(4px);
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #cbd5e1;
+            padding: 5px 0;
+            font-size: 0.88rem;
+        }
+
+        .contact-list li i {
+            color: #60a5fa;
+            width: 18px;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .contact-list li a {
+            color: #cbd5e1;
+            transition: 0.2s;
+            word-break: break-all;
+        }
+
+        .contact-list li a:hover {
+            color: #fff;
+        }
+
+        .whatsapp-contact {
+            margin-top: 2px;
+        }
+
+        .whatsapp-contact i {
+            color: #25D366 !important;
+            font-size: 1.1rem;
+        }
+
+        .whatsapp-contact a {
+            color: #25D366 !important;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .whatsapp-contact a:hover {
+            color: #34d399 !important;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            color: #94a3b8;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .social-icons a:hover {
+            background: #2563eb;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .social-icons a[aria-label="WhatsApp"]:hover {
+            background: #128C7E !important;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            color: #94a3b8;
+            font-size: 0.85rem;
+            gap: 12px;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        .footer-bottom p strong {
+            color: #f1f5f9;
+        }
+
+        .bottom-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .bottom-links a {
+            color: #94a3b8;
+            font-size: 0.8rem;
+            transition: 0.2s;
+        }
+
+        .bottom-links a:hover {
+            color: #fff;
+        }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: #fff;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
+            color: #fff;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* ===== RESPONSIVE BREAKPOINTS ===== */
+
+        /* Tablets & small laptops */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+
+            .services-grid-modern {
+                grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            }
+
+            .service-items-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+
+            .research-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .cta-wrapper {
+                padding: 28px 24px;
+            }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            /* Nav */
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .navbar {
+                padding: 12px 0;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            /* Hero */
+            .hero-wrap {
+                padding: 20px 0 30px;
+            }
+
+            .hero-grid {
+                flex-direction: column;
+                text-align: center;
+                gap: 24px;
+            }
+
+            .hero-content {
+                min-width: 0;
+                width: 100%;
+            }
+
+            .hero-content p {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-image {
+                min-width: 0;
+                width: 100%;
+            }
+
+            .hero-image img {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+
+            /* Services */
+            .services-section {
+                padding: 40px 0;
+            }
+
+            .services-grid-modern {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .service-card-modern {
+                padding: 22px 18px;
+            }
+
+            .service-items-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-header {
+                padding: 14px 16px;
+                gap: 12px;
+            }
+
+            .category-icon {
+                width: 42px;
+                height: 42px;
+                font-size: 1.1rem;
+            }
+
+            .category-info h3 {
+                font-size: 1rem;
+            }
+
+            .category-info p {
+                font-size: 0.78rem;
+            }
+
+            .category-content {
+                padding: 0 16px;
+            }
+
+            .category-card.active .category-content {
+                padding: 0 16px 18px;
+            }
+
+            .service-item {
+                padding: 12px 14px;
+                gap: 12px;
+            }
+
+            .item-details h4 {
+                font-size: 0.85rem;
+            }
+
+            .item-details p {
+                font-size: 0.78rem;
+            }
+
+            .services-cta {
+                padding: 28px 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .cta-content p {
+                font-size: 0.9rem;
+            }
+
+            /* About */
+            .about-wrap {
+                flex-direction: column;
+                gap: 28px;
+            }
+
+            .about-text {
+                min-width: 0;
+                width: 100%;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .about-item {
+                padding: 14px 16px;
+            }
+
+            .about-image {
+                min-width: 0;
+                width: 100%;
+            }
+
+            /* Testimonials */
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .testimonial-card {
+                padding: 20px 16px;
+            }
+
+            /* Footer */
+            .footer-cta {
+                padding: 36px 0 18px;
+                border-radius: 28px 28px 0 0;
+                margin-top: 36px;
+            }
+
+            .cta-wrapper {
+                flex-direction: column;
+                padding: 24px 18px;
+                text-align: center;
+            }
+
+            .cta-stats {
+                justify-content: center;
+            }
+
+            .cta-form {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .form-group input {
+                font-size: 0.9rem;
+                padding: 12px 10px;
+            }
+
+            .btn-glow {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 28px;
+                padding: 18px 0 16px;
+            }
+
+            .footer-col {
+                flex: 1 1 auto;
+                min-width: 0;
+                width: 100%;
+            }
+
+            .footer-col h4 {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .footer-col ul li a {
+                font-size: 0.85rem;
+            }
+
+            .contact-list li {
+                font-size: 0.85rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+                padding-top: 16px;
+            }
+
+            .bottom-links {
+                justify-content: center;
+                gap: 16px;
+            }
+
+            .bottom-links a {
+                font-size: 0.75rem;
+            }
+
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                font-size: 1.5rem;
+                bottom: 16px;
+                right: 16px;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            .social-icons a {
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 400px) {
+            .container {
+                padding: 0 12px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .hero-actions .btn-primary,
+            .hero-actions .btn-outline {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .btn-primary {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            .btn-outline {
+                padding: 8px 20px;
+                font-size: 0.85rem;
+            }
+
+            .section-head h2 {
+                font-size: 1.4rem;
+            }
+
+            .services-cta {
+                padding: 22px 16px;
+            }
+
+            .cta-button {
+                padding: 12px 22px;
+                font-size: 0.85rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .cta-wrapper {
+                padding: 20px 14px;
+            }
+
+            .cta-text h3 {
+                font-size: 1.2rem;
+            }
+
+            .category-header {
+                padding: 12px 12px;
+                gap: 10px;
+            }
+
+            .category-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 0.95rem;
+            }
+
+            .category-info h3 {
+                font-size: 0.9rem;
+            }
+
+            .service-card-modern {
+                padding: 18px 14px;
+            }
+
+            .card-icon {
+                width: 46px;
+                height: 46px;
+                font-size: 1.2rem;
+            }
+
+            .card-number {
+                font-size: 1.8rem;
+            }
+
+            .whatsapp-float {
+                width: 44px;
+                height: 44px;
+                font-size: 1.3rem;
+                bottom: 12px;
+                right: 12px;
+            }
+        }
+
+        /* Landscape phones */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero-wrap {
+                padding: 16px 0 24px;
+            }
+
+            .hero-grid {
+                gap: 16px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-image img {
+                max-width: 60%;
+            }
+        }
+
+        /* Print */
+        @media print {
+            .whatsapp-float {
+                display: none !important;
+            }
+            .menu-toggle {
+                display: none !important;
+            }
+            .nav-links {
+                display: flex !important;
+            }
+            .mobile-nav {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <!-- NAV -->
-    <nav class="navbar">
-      <div class="logo">Hafzee Infopark</div>
-      <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact" class="nav-cta"><i class="fas fa-rocket"></i> Get started</a>
-      </div>
-      <div class="menu-toggle" onclick="toggleMobile()"><i class="fas fa-bars"></i></div>
-    </nav>
-    <div id="mobileMenu" class="mobile-nav hidden">
-      <a href="#">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact" style="color:#2563eb;font-weight:700;">Contact</a>
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <div class="container">
-    <style>
-      .hero-white {
-        background: #ffffff;
-        padding: 60px 0 80px;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 40px;
-      }
-
-      .hero-white .hero-content {
-        flex: 1 1 45%;
-      }
-
-      .hero-white .hero-image {
-        flex: 1 1 45%;
-        text-align: center;
-      }
-
-      .hero-white .hero-image img {
-        max-width: 100%;
-      }
-
-      .hero-white .hero-badge {
-        background: #e6f0ff;
-        color: #1d4ed8;
-        padding: 6px 18px;
-        border-radius: 60px;
-        font-weight: 600;
-        font-size: 0.8rem;
-        display: inline-block;
-        margin-bottom: 20px;
-      }
-
-      .hero-white h1 {
-        font-size: 3.4rem;
-        font-weight: 800;
-        line-height: 1.2;
-        margin-bottom: 20px;
-        color: #1e293b;
-      }
-
-      .hero-white h1 i {
-        color: #2563eb;
-        font-style: normal;
-      }
-
-      .hero-white p {
-        font-size: 1.15rem;
-        color: #475569;
-        max-width: 480px;
-        margin-bottom: 32px;
-      }
-
-      .hero-white .hero-actions {
-        display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-
-      .hero-white .btn-primary {
-        background: linear-gradient(145deg, #2563eb, #1d4ed8);
-        color: #fff;
-        padding: 12px 30px;
-        border-radius: 60px;
-        font-weight: 600;
-        display: inline-block;
-        box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.4);
-        transition: all 0.3s ease;
-        text-decoration: none;
-      }
-
-      .hero-white .btn-primary:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 14px 28px -8px rgba(37, 99, 235, 0.5);
-      }
-
-      .hero-white .btn-outline {
-        background: transparent;
-        border: 2px solid #2563eb;
-        color: #2563eb;
-        padding: 10px 28px;
-        border-radius: 60px;
-        font-weight: 600;
-        transition: 0.3s;
-        display: inline-block;
-        text-decoration: none;
-      }
-
-      .hero-white .btn-outline:hover {
-        background: #2563eb;
-        color: #fff;
-        transform: scale(1.02);
-      }
-    </style>
-
-    <!-- HTML -->
-    <div class="hero-white">
-      <div class="hero-content">
-        <div class="hero-badge"><i class="fas fa-microchip"></i> AI · Web · Research</div>
-        <h1>Build <i>future-ready</i> <br />digital solutions</h1>
-        <p>We develop AI-powered applications, websites, mobile apps, research prototypes, robotics &amp; custom
-          software for businesses and institutions.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Start a project</a>
-          <a href="#services" class="btn-outline">Explore services</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="assets/images/main.jpg" alt="IT solutions" />
-      </div>
-    </div>
-  </div>
-
-  <!-- SERVICES -->
-  <div class="services-section" id="services">
+    <!-- ===== NAV ===== -->
     <div class="container">
-      <!-- Section Header -->
-      <div class="section-header">
-        <span class="section-tag"><i class="fas fa-cogs"></i> What We Offer</span>
-        <h2>Transform Your <span class="highlight">Business</span> With Our <span class="highlight">Technology</span>
-        </h2>
-        <div class="header-line"></div>
-        <p>We deliver innovative, scalable, and future-ready technology solutions that drive business growth, enhance
-          efficiency, and solve complex challenges across industries.</p>
-      </div>
-
-      <!-- Services Grid -->
-      <div class="services-grid-modern">
-
-        <!-- Service 1: Web & App Development -->
-        <div class="service-card-modern">
-          <div class="card-icon-wrapper">
-            <div class="card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-              <i class="fas fa-globe"></i>
+        <nav class="navbar">
+            <div class="logo">Hafzee Infopark</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact" class="nav-cta"><i class="fas fa-rocket"></i> Get started</a>
             </div>
-            <div class="card-number">01</div>
-          </div>
-          <h4>Web &amp; App Development</h4>
-          <p>We build responsive, high-performance websites and mobile applications with modern stacks, ensuring
-            seamless user experiences and robust functionality.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check-circle"></i> Responsive Web Design</li>
-            <li><i class="fas fa-check-circle"></i> Progressive Web Apps (PWA)</li>
-            <li><i class="fas fa-check-circle"></i> iOS &amp; Android Apps</li>
-            <li><i class="fas fa-check-circle"></i> E-commerce Solutions</li>
-          </ul>
-          <a href="#" class="service-link">Explore Web Solutions <i class="fas fa-arrow-right"></i></a>
+            <button class="menu-toggle" onclick="toggleMobile()" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="mobile-nav hidden">
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact" style="color:#2563eb;font-weight:700;">Contact</a>
         </div>
+    </div>
 
-        <!-- Service 2: AI & Machine Learning -->
-        <div class="service-card-modern">
-          <div class="card-icon-wrapper">
-            <div class="card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-              <i class="fas fa-brain"></i>
+    <!-- ===== HERO ===== -->
+    <div class="container hero-wrap">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-microchip"></i> AI · Web · Research</div>
+                <h1>Build <i>future-ready</i> <br />digital solutions</h1>
+                <p>We develop AI-powered applications, websites, mobile apps, research prototypes, robotics &amp; custom software for businesses and institutions.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Start a project</a>
+                    <a href="#services" class="btn-outline">Explore services</a>
+                </div>
             </div>
-            <div class="card-number">02</div>
-          </div>
-          <h4>AI &amp; Machine Learning</h4>
-          <p>Leverage the power of artificial intelligence and machine learning to automate processes, gain insights,
-            and make data-driven business decisions.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check-circle"></i> Predictive Analytics</li>
-            <li><i class="fas fa-check-circle"></i> Natural Language Processing</li>
-            <li><i class="fas fa-check-circle"></i> Computer Vision</li>
-            <li><i class="fas fa-check-circle"></i> Intelligent Automation</li>
-          </ul>
-          <a href="#" class="service-link">Explore AI Solutions <i class="fas fa-arrow-right"></i></a>
-        </div>
-
-        <!-- Service 3: Research & PhD -->
-        <div class="service-card-modern">
-          <div class="card-icon-wrapper">
-            <div class="card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-              <i class="fas fa-microscope"></i>
+            <div class="hero-image">
+                <img src="assets/images/main.jpg" alt="IT solutions" loading="lazy" />
             </div>
-            <div class="card-number">03</div>
-          </div>
-          <h4>Research &amp; PhD Support</h4>
-          <p>We provide comprehensive technical implementation support for research projects, PhD theses, and academic
-            prototypes with cutting-edge technologies.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check-circle"></i> Research Prototyping</li>
-            <li><i class="fas fa-check-circle"></i> Data Science &amp; Analysis</li>
-            <li><i class="fas fa-check-circle"></i> Model Implementation</li>
-            <li><i class="fas fa-check-circle"></i> Academic Publication Support</li>
-          </ul>
-          <a href="#" class="service-link">Explore Research Support <i class="fas fa-arrow-right"></i></a>
         </div>
+    </div>
 
-        <!-- Service 4: Automation & Robotics -->
-        <div class="service-card-modern">
-          <div class="card-icon-wrapper">
-            <div class="card-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-              <i class="fas fa-robot"></i>
+    <!-- ===== SERVICES SECTION ===== -->
+    <div class="services-section" id="services">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag"><i class="fas fa-cogs"></i> What We Offer</span>
+                <h2>Transform Your <em>Business</em> With Our <em>Technology</em></h2>
+                <div class="header-line"></div>
+                <p>We deliver innovative, scalable, and future-ready technology solutions that drive business growth, enhance efficiency, and solve complex challenges across industries.</p>
             </div>
-            <div class="card-number">04</div>
-          </div>
-          <h4>Automation &amp; Robotics</h4>
-          <p>Streamline your operations with intelligent automation systems, chatbots, and robotics solutions designed
-            to reduce manual effort and increase productivity.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check-circle"></i> Business Process Automation</li>
-            <li><i class="fas fa-check-circle"></i> AI Chatbots &amp; Virtual Assistants</li>
-            <li><i class="fas fa-check-circle"></i> Robotics Solutions</li>
-            <li><i class="fas fa-check-circle"></i> IoT Integration</li>
-          </ul>
-          <a href="#" class="service-link">Explore Automation <i class="fas fa-arrow-right"></i></a>
+
+            <div class="services-grid-modern">
+                <!-- Service 1 -->
+                <div class="service-card-modern">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="card-number">01</div>
+                    </div>
+                    <h4>Web &amp; App Development</h4>
+                    <p>Responsive, high-performance websites and mobile apps with modern stacks for seamless user experiences.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Responsive Web Design</li>
+                        <li><i class="fas fa-check-circle"></i> Progressive Web Apps (PWA)</li>
+                        <li><i class="fas fa-check-circle"></i> iOS &amp; Android Apps</li>
+                        <li><i class="fas fa-check-circle"></i> E-commerce Solutions</li>
+                    </ul>
+                    <a href="#" class="service-link">Explore Web Solutions <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card-modern">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="card-number">02</div>
+                    </div>
+                    <h4>AI &amp; Machine Learning</h4>
+                    <p>Leverage AI and ML to automate processes, gain insights, and make data-driven business decisions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Predictive Analytics</li>
+                        <li><i class="fas fa-check-circle"></i> Natural Language Processing</li>
+                        <li><i class="fas fa-check-circle"></i> Computer Vision</li>
+                        <li><i class="fas fa-check-circle"></i> Intelligent Automation</li>
+                    </ul>
+                    <a href="#" class="service-link">Explore AI Solutions <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card-modern">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="card-number">03</div>
+                    </div>
+                    <h4>Research &amp; PhD Support</h4>
+                    <p>Comprehensive technical implementation support for research projects, PhD theses, and academic prototypes.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Research Prototyping</li>
+                        <li><i class="fas fa-check-circle"></i> Data Science &amp; Analysis</li>
+                        <li><i class="fas fa-check-circle"></i> Model Implementation</li>
+                        <li><i class="fas fa-check-circle"></i> Academic Publication Support</li>
+                    </ul>
+                    <a href="#" class="service-link">Explore Research Support <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card-modern">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon" style="background:linear-gradient(135deg,#43e97b 0%,#38f9d7 100%);">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="card-number">04</div>
+                    </div>
+                    <h4>Automation &amp; Robotics</h4>
+                    <p>Streamline operations with intelligent automation systems, chatbots, and robotics solutions that reduce manual effort.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Business Process Automation</li>
+                        <li><i class="fas fa-check-circle"></i> AI Chatbots &amp; Virtual Assistants</li>
+                        <li><i class="fas fa-check-circle"></i> Robotics Solutions</li>
+                        <li><i class="fas fa-check-circle"></i> IoT Integration</li>
+                    </ul>
+                    <a href="#" class="service-link">Explore Automation <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Category Accordion -->
+            <div class="service-categories">
+
+                <!-- Category: Web Development -->
+                <div class="category-card active">
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <div class="category-icon" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>Web Development</h3>
+                            <p>Build powerful, scalable web applications</p>
+                        </div>
+                        <div class="category-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="category-content">
+                        <div class="service-items-grid">
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-laptop"></i></div>
+                                <div class="item-details">
+                                    <h4>Responsive Web Design</h4>
+                                    <p>Mobile-first, cross-browser compatible websites.</p>
+                                    <span class="item-tag">Essential</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-credit-card"></i></div>
+                                <div class="item-details">
+                                    <h4>Payment Gateway Integration</h4>
+                                    <p>Razorpay, Stripe, PayPal, and UPI integration.</p>
+                                    <span class="item-tag">E-commerce</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="item-details">
+                                    <h4>Admin Panel & Dashboard</h4>
+                                    <p>Powerful interfaces for managing users &amp; analytics.</p>
+                                    <span class="item-tag">Management</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-shopping-cart"></i></div>
+                                <div class="item-details">
+                                    <h4>E-commerce Solutions</h4>
+                                    <p>Full-featured online stores with inventory &amp; orders.</p>
+                                    <span class="item-tag">Business</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-database"></i></div>
+                                <div class="item-details">
+                                    <h4>Database Design & Optimization</h4>
+                                    <p>Efficient architecture, query optimization, and data management.</p>
+                                    <span class="item-tag">Backend</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-shield-alt"></i></div>
+                                <div class="item-details">
+                                    <h4>Security & Performance</h4>
+                                    <p>SSL, encryption, firewall, and performance optimization.</p>
+                                    <span class="item-tag">Security</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-cta">
+                            <a href="#contact" class="module-cta">Get Web Development Quote <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: App Development -->
+                <div class="category-card">
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <div class="category-icon" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>App Development</h3>
+                            <p>Native & cross-platform mobile applications</p>
+                        </div>
+                        <div class="category-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="category-content">
+                        <div class="service-items-grid">
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fab fa-apple"></i></div>
+                                <div class="item-details">
+                                    <h4>iOS App Development</h4>
+                                    <p>Native iOS apps with Swift and SwiftUI.</p>
+                                    <span class="item-tag">iOS</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fab fa-android"></i></div>
+                                <div class="item-details">
+                                    <h4>Android App Development</h4>
+                                    <p>Native Android apps with Kotlin/Java.</p>
+                                    <span class="item-tag">Android</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-file-archive"></i></div>
+                                <div class="item-details">
+                                    <h4>APK & IPA Generation</h4>
+                                    <p>Build and package apps for deployment.</p>
+                                    <span class="item-tag">Deployment</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-store"></i></div>
+                                <div class="item-details">
+                                    <h4>App Store & Play Store Submission</h4>
+                                    <p>Guidance for publishing on Google Play and Apple App Store.</p>
+                                    <span class="item-tag">Publishing</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-sync-alt"></i></div>
+                                <div class="item-details">
+                                    <h4>Cross-Platform Development</h4>
+                                    <p>Build apps for both iOS and Android using Flutter, React Native, or Ionic.</p>
+                                    <span class="item-tag">Hybrid</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-bell"></i></div>
+                                <div class="item-details">
+                                    <h4>Push Notifications & APIs</h4>
+                                    <p>Implement push notifications, REST APIs, and real-time sync.</p>
+                                    <span class="item-tag">Features</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-cta">
+                            <a href="#contact" class="module-cta">Get App Development Quote <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Research & Academic -->
+                <div class="category-card">
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <div class="category-icon" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>Research & Academic Support</h3>
+                            <p>Comprehensive support for research and academic projects</p>
+                        </div>
+                        <div class="category-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="category-content">
+                        <div class="service-items-grid research-grid">
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-lightbulb"></i></div>
+                                <div class="item-details">
+                                    <h4>Topic Selection</h4>
+                                    <p>Expert guidance in identifying research topics.</p>
+                                    <span class="item-tag">Planning</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-file-alt"></i></div>
+                                <div class="item-details">
+                                    <h4>Research Proposal Writing</h4>
+                                    <p>Professional proposal development with clear objectives.</p>
+                                    <span class="item-tag">Proposal</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-pen-fancy"></i></div>
+                                <div class="item-details">
+                                    <h4>Research Paper Writing</h4>
+                                    <p>High-quality papers with proper structure and citations.</p>
+                                    <span class="item-tag">Writing</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-book-open"></i></div>
+                                <div class="item-details">
+                                    <h4>Literature Review</h4>
+                                    <p>Comprehensive review covering theories and findings.</p>
+                                    <span class="item-tag">Review</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-book"></i></div>
+                                <div class="item-details">
+                                    <h4>Thesis Writing</h4>
+                                    <p>Complete thesis writing including chapters and formatting.</p>
+                                    <span class="item-tag">Thesis</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-list-ul"></i></div>
+                                <div class="item-details">
+                                    <h4>Synopsis Writing</h4>
+                                    <p>Concise synopsis development for research proposals.</p>
+                                    <span class="item-tag">Synopsis</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-tasks"></i></div>
+                                <div class="item-details">
+                                    <h4>Assignment Writing</h4>
+                                    <p>Professional assignment writing across various subjects.</p>
+                                    <span class="item-tag">Assignment</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-code"></i></div>
+                                <div class="item-details">
+                                    <h4>Design & Development</h4>
+                                    <p>Technical implementation support for research projects.</p>
+                                    <span class="item-tag">Development</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-spell-check"></i></div>
+                                <div class="item-details">
+                                    <h4>Proofreading Service</h4>
+                                    <p>Thorough proofreading for grammar and academic formatting.</p>
+                                    <span class="item-tag">Editing</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-edit"></i></div>
+                                <div class="item-details">
+                                    <h4>Correction Support</h4>
+                                    <p>Comprehensive revision based on reviewer feedback.</p>
+                                    <span class="item-tag">Revision</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-journal-whills"></i></div>
+                                <div class="item-details">
+                                    <h4>Journal Publication</h4>
+                                    <p>End-to-end support including formatting and submission.</p>
+                                    <span class="item-tag">Publication</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-cta">
+                            <a href="#contact" class="module-cta">Get Research Support Quote <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: AI & Automation -->
+                <div class="category-card">
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <div class="category-icon" style="background:linear-gradient(135deg,#43e97b 0%,#38f9d7 100%);">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="category-info">
+                            <h3>AI & Automation</h3>
+                            <p>Intelligent automation and AI-powered solutions</p>
+                        </div>
+                        <div class="category-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="category-content">
+                        <div class="service-items-grid">
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-brain"></i></div>
+                                <div class="item-details">
+                                    <h4>Machine Learning Models</h4>
+                                    <p>Build and deploy ML models for prediction and classification.</p>
+                                    <span class="item-tag">ML</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-comment-dots"></i></div>
+                                <div class="item-details">
+                                    <h4>AI Chatbots & Virtual Assistants</h4>
+                                    <p>Intelligent chatbots with NLP for support and automation.</p>
+                                    <span class="item-tag">Chatbots</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-chart-line"></i></div>
+                                <div class="item-details">
+                                    <h4>Predictive Analytics</h4>
+                                    <p>Data-driven predictions to optimize business decisions.</p>
+                                    <span class="item-tag">Analytics</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-eye"></i></div>
+                                <div class="item-details">
+                                    <h4>Computer Vision Solutions</h4>
+                                    <p>Image recognition, object detection, and video analysis.</p>
+                                    <span class="item-tag">Vision</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-cogs"></i></div>
+                                <div class="item-details">
+                                    <h4>Business Process Automation</h4>
+                                    <p>Automate repetitive tasks to improve efficiency.</p>
+                                    <span class="item-tag">Automation</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="item-icon"><i class="fas fa-microchip"></i></div>
+                                <div class="item-details">
+                                    <h4>IoT & Robotics Integration</h4>
+                                    <p>Connect devices and robots for real-time monitoring.</p>
+                                    <span class="item-tag">IoT</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-cta">
+                            <a href="#contact" class="module-cta">Get AI Solutions Quote <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="services-cta">
+                <div class="cta-content">
+                    <h3>Ready to <span>Transform</span> Your Business?</h3>
+                    <p>Let's discuss how our technology solutions can help you achieve your goals.</p>
+                </div>
+                <a href="#contact" class="cta-button"><i class="fas fa-rocket"></i> Start Your Project</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <div class="container" id="about" style="margin-top:40px;">
+        <div class="about-wrap">
+            <div class="about-text">
+                <h3>About <em>Hafzee Infopark</em></h3>
+                <p>We transform ideas into innovative digital solutions through web, mobile, AI, research, and automation. Our team is dedicated to solving real-world challenges with scalable technology.</p>
+                <div class="about-grid">
+                    <div class="about-item">
+                        <h4><i class="fas fa-code"></i> Custom Software</h4>
+                        <p>Tailored solutions for your workflow and business needs.</p>
+                    </div>
+                    <div class="about-item">
+                        <h4><i class="fas fa-headset"></i> Dedicated Support</h4>
+                        <p>Continuous assistance to maintain and improve your solutions.</p>
+                    </div>
+                    <div class="about-item">
+                        <h4><i class="fas fa-flask"></i> Research &amp; Innovation</h4>
+                        <p>Support for academic research, data science, and AI projects.</p>
+                    </div>
+                    <div class="about-item">
+                        <h4><i class="fas fa-mobile-alt"></i> Apps &amp; Web</h4>
+                        <p>From websites to AI-powered apps — we turn ideas into reality.</p>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-primary" style="margin-top:8px;"><i class="fas fa-rocket"></i> Start your project</a>
+            </div>
+            <div class="about-image">
+                <img src="assets/images/main1.jpg" alt="about" loading="lazy" />
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <div class="container" style="margin-top:50px;">
+        <div class="section-head">
+            <h2>What our <em>clients say</em></h2>
+            <div class="line"></div>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"The management software solution from Hafzee Infopark has been a game-changer for our business. With seamless website integration, an intuitive admin panel, and real-time analytics, we now manage operations with unparalleled ease."</p>
+                <div class="author"><img src="assets/images/p1.jpg" alt="avatar" loading="lazy" />
+                    <div>Mr. Saran <span style="font-weight:400;color:#64748b;">· Wholesale food business</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Hafzee Infopark transformed our honey business with a stunning, user-friendly website. The seamless payment integration and smooth checkout have significantly boosted our online sales. Highly recommended!"</p>
+                <div class="author"><img src="assets/images/p1.jpg" alt="avatar" loading="lazy" />
+                    <div>Mr. Mohamed Faalik <span style="font-weight:400;color:#64748b;">· Honey business</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Hafzee Infopark developed an exceptional AI prediction model for our loan management system. The model accurately assesses loan applications and reduces default risk significantly. Approval accuracy improved by 85%."</p>
+                <div class="author"><img src="assets/images/p2.jpg" alt="avatar" loading="lazy" />
+                    <div>Mr. Raja <span style="font-weight:400;color:#64748b;">· Finance &amp; Gold Loan</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Hafzee Infopark developed a powerful mobile app for our wholesale onion business. The Android and iOS apps allow customers to place orders, track shipments in real-time, and receive instant updates. This transformed our operations."</p>
+                <div class="author"><img src="assets/images/p2.jpg" alt="avatar" loading="lazy" />
+                    <div>Mr. Sam <span style="font-weight:400;color:#64748b;">· Onion selling company</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-cta" id="contact">
+        <div class="container">
+            <div class="cta-wrapper">
+                <div class="cta-text">
+                    <span class="cta-badge"><i class="fas fa-sparkles"></i> Let's talk</span>
+                    <h3>Ready to build something <br /><span class="highlight">innovative</span> together?</h3>
+                    <p>Get a free quote or discuss your project with our experts.</p>
+                    <div class="cta-stats">
+                        <div><i class="fas fa-check-circle"></i> 50+ projects delivered</div>
+                        <div><i class="fas fa-check-circle"></i> 4.9 ★ client rating</div>
+                    </div>
+                </div>
+                <div class="cta-form">
+                    <div class="form-group">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input type="email" placeholder="Enter your email address" />
+                    </div>
+                    <a href="#" class="btn-glow"><i class="fas fa-paper-plane"></i> Get a quote</a>
+                    <p class="form-note">We'll respond within 24 hours</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4><i class="fas fa-compass"></i> Company</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#pricing"><i class="fas fa-chevron-right"></i> Pricing</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><i class="fas fa-cogs"></i> Solutions</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Web &amp; Apps</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> AI &amp; ML</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Research</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h4><i class="fas fa-address-card"></i> Get in touch</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+918754671568">+91 8754671568</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:hafzeeinfopark@gmail.com">hafzeeinfopark@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> India</li>
+                        <li class="whatsapp-contact">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/918754671568?text=Hi%20Hafzee%20Infopark%2C%20I%27m%20interested%20in%20your%20services" target="_blank">Chat on WhatsApp</a>
+                        </li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/918754671568?text=Hi%20Hafzee%20Infopark%2C%20I%27m%20interested%20in%20your%20services" target="_blank" aria-label="WhatsApp" style="background:#25D366;color:#fff;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 <strong>Hafzee Infopark</strong>. All rights reserved.</p>
+                <div class="bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
         </div>
 
-      </div>
-
-      <!-- Call to Action -->
-      <div class="services-cta">
-        <div class="cta-content">
-          <h3>Ready to <span>Transform</span> Your Business?</h3>
-          <p>Let's discuss how our technology solutions can help you achieve your goals.</p>
-        </div>
-        <a href="#contact" class="cta-button">
-          <i class="fas fa-rocket"></i> Start Your Project
+        <a href="https://wa.me/918754671568?text=Hi%20Hafzee%20Infopark%2C%20I%27m%20interested%20in%20your%20services" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
         </a>
-      </div>
-    </div>
-  </div>
-
-  <style>
-    /* ----- SERVICES SECTION STYLES ----- */
-    .services-section {
-      padding: 80px 0;
-      background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Decorative Background Elements */
-    .services-section::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
-      border-radius: 50%;
-      z-index: 0;
-    }
-
-    .services-section::after {
-      content: '';
-      position: absolute;
-      bottom: -30%;
-      left: -10%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(99, 102, 241, 0.04) 0%, transparent 70%);
-      border-radius: 50%;
-      z-index: 0;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Section Header */
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-tag {
-      display: inline-block;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(99, 102, 241, 0.1));
-      color: #2563eb;
-      padding: 8px 20px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      letter-spacing: 0.5px;
-      margin-bottom: 16px;
-    }
-
-    .section-tag i {
-      margin-right: 8px;
-    }
-
-    .section-header h2 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      color: #1e293b;
-      margin-bottom: 16px;
-      line-height: 1.2;
-    }
-
-    .section-header h2 .highlight {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .header-line {
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, #2563eb, #7c3aed);
-      border-radius: 4px;
-      margin: 0 auto 20px;
-    }
-
-    .section-header p {
-      color: #64748b;
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    /* Services Grid */
-    .services-grid-modern {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-bottom: 50px;
-    }
-
-    /* Service Card */
-    .service-card-modern {
-      background: #ffffff;
-      padding: 35px 28px 30px;
-      border-radius: 24px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-      border: 1px solid rgba(0, 0, 0, 0.04);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card-modern::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #2563eb, #7c3aed);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .service-card-modern:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(37, 99, 235, 0.12);
-      border-color: rgba(37, 99, 235, 0.1);
-    }
-
-    .service-card-modern:hover::before {
-      opacity: 1;
-    }
-
-    .card-icon-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 20px;
-    }
-
-    .card-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      color: #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .service-card-modern:hover .card-icon {
-      transform: scale(1.05) rotate(-3deg);
-    }
-
-    .card-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: rgba(0, 0, 0, 0.04);
-      line-height: 1;
-      transition: color 0.3s ease;
-    }
-
-    .service-card-modern:hover .card-number {
-      color: rgba(37, 99, 235, 0.08);
-    }
-
-    .service-card-modern h4 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #1e293b;
-      margin-bottom: 12px;
-    }
-
-    .service-card-modern p {
-      color: #64748b;
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    .service-features {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 20px 0;
-    }
-
-    .service-features li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-      color: #475569;
-      padding: 4px 0;
-    }
-
-    .service-features li i {
-      color: #2563eb;
-      font-size: 0.8rem;
-    }
-
-    .service-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #2563eb;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      padding: 8px 0;
-    }
-
-    .service-link i {
-      transition: transform 0.3s ease;
-      font-size: 0.8rem;
-    }
-
-    .service-link:hover {
-      color: #1d4ed8;
-    }
-
-    .service-link:hover i {
-      transform: translateX(6px);
-    }
-
-    /* Services CTA */
-    .services-cta {
-      background: linear-gradient(135deg, #1e293b, #0b2b5c);
-      border-radius: 24px;
-      padding: 50px 60px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-      margin-top: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .services-cta::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -10%;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .cta-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-content h3 {
-      color: #ffffff;
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .cta-content h3 span {
-      background: linear-gradient(135deg, #60a5fa, #a78bfa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .cta-content p {
-      color: #94a3b8;
-      font-size: 1rem;
-      margin: 0;
-    }
-
-    .cta-button {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-      color: #fff;
-      padding: 16px 36px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 30px rgba(37, 99, 235, 0.3);
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 16px 40px rgba(37, 99, 235, 0.4);
-      color: #fff;
-    }
-
-    .cta-button i {
-      font-size: 1.1rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 992px) {
-      .section-header h2 {
-        font-size: 2.2rem;
-      }
-
-      .services-cta {
-        padding: 40px 35px;
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .services-section {
-        padding: 60px 0;
-      }
-
-      .section-header h2 {
-        font-size: 1.8rem;
-      }
-
-      .services-grid-modern {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card-modern {
-        padding: 28px 20px;
-      }
-
-      .services-cta {
-        padding: 30px 24px;
-      }
-
-      .cta-content h3 {
-        font-size: 1.4rem;
-      }
-
-      .cta-button {
-        padding: 14px 28px;
-        font-size: 0.95rem;
-      }
-    }
-  </style>
-
-  <!-- ABOUT -->
-  <div class="container" id="about" style="margin-top:70px;">
-    <div class="about-wrap">
-      <div class="about-text">
-        <h3>About <em>Hafzee Infopark</em></h3>
-        <p style="color:#475569;">We transform ideas into innovative digital solutions through web, mobile, AI,
-          research, and automation. Our team is dedicated to solving real-world challenges with scalable technology.</p>
-        <div class="about-grid">
-          <div class="about-item">
-            <h4><i class="fas fa-code" style="color:#2563eb;"></i> Custom Software</h4>
-            <p>Tailored solutions for your workflow and business needs.</p>
-          </div>
-          <div class="about-item">
-            <h4><i class="fas fa-headset" style="color:#2563eb;"></i> Dedicated Support</h4>
-            <p>Continuous assistance to maintain and improve your solutions.</p>
-          </div>
-          <div class="about-item">
-            <h4><i class="fas fa-flask" style="color:#2563eb;"></i> Research &amp; Innovation</h4>
-            <p>Support for academic research, data science, and AI projects.</p>
-          </div>
-          <div class="about-item">
-            <h4><i class="fas fa-mobile-alt" style="color:#2563eb;"></i> Apps &amp; Web</h4>
-            <p>From websites to AI-powered apps — we turn ideas into reality.</p>
-          </div>
-        </div>
-        <a href="#contact" class="btn-primary" style="margin-top:10px;"><i class="fas fa-rocket"></i> Start your
-          project</a>
-      </div>
-      <div class="about-image">
-        <img src="assets/images/main1.jpg" alt="about" />
-      </div>
-    </div>
-  </div>
-
-  <!-- PRICING -->
-  <div class="services-section" id="services">
-    <div class="container">
-      <!-- Section Header -->
-      <div class="section-header">
-        <span class="section-tag"><i class="fas fa-cogs"></i> Our Expertise</span>
-        <h2>Comprehensive <span class="highlight">Technology Solutions</span> For Your Business</h2>
-        <div class="header-line"></div>
-        <p>We deliver end-to-end solutions across web development, mobile applications, research support, and AI-driven
-          innovations.</p>
-      </div>
-
-      <!-- Service Categories -->
-      <div class="service-categories">
-
-        <!-- Category 1: Web Development -->
-        <div class="category-card">
-          <div class="category-header" onclick="toggleCategory(this)">
-            <div class="category-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="category-info">
-              <h3>Web Development</h3>
-              <p>Build powerful, scalable web applications</p>
-            </div>
-            <div class="category-toggle">
-              <i class="fas fa-chevron-down"></i>
-            </div>
-          </div>
-          <div class="category-content">
-            <div class="service-items-grid">
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-laptop"></i></div>
-                <div class="item-details">
-                  <h4>Responsive Web Design</h4>
-                  <p>Mobile-first, cross-browser compatible websites that look perfect on all devices.</p>
-                  <span class="item-tag">Essential</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-credit-card"></i></div>
-                <div class="item-details">
-                  <h4>Payment Gateway Integration</h4>
-                  <p>Secure payment processing with Razorpay, Stripe, PayPal, and UPI integration.</p>
-                  <span class="item-tag">E-commerce</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-tachometer-alt"></i></div>
-                <div class="item-details">
-                  <h4>Admin Panel & Dashboard</h4>
-                  <p>Powerful admin interfaces for managing users, content, analytics, and business operations.</p>
-                  <span class="item-tag">Management</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-shopping-cart"></i></div>
-                <div class="item-details">
-                  <h4>E-commerce Solutions</h4>
-                  <p>Full-featured online stores with product management, inventory, and order tracking.</p>
-                  <span class="item-tag">Business</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-database"></i></div>
-                <div class="item-details">
-                  <h4>Database Design & Optimization</h4>
-                  <p>Efficient database architecture, query optimization, and data management solutions.</p>
-                  <span class="item-tag">Backend</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-shield-alt"></i></div>
-                <div class="item-details">
-                  <h4>Security & Performance</h4>
-                  <p>SSL certificates, data encryption, firewall protection, and performance optimization.</p>
-                  <span class="item-tag">Security</span>
-                </div>
-              </div>
-            </div>
-            <div class="category-cta">
-              <a href="#contact" class="module-cta">Get Web Development Quote <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 2: App Development -->
-        <div class="category-card">
-          <div class="category-header" onclick="toggleCategory(this)">
-            <div class="category-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <div class="category-info">
-              <h3>App Development</h3>
-              <p>Native & cross-platform mobile applications</p>
-            </div>
-            <div class="category-toggle">
-              <i class="fas fa-chevron-down"></i>
-            </div>
-          </div>
-          <div class="category-content">
-            <div class="service-items-grid">
-              <div class="service-item">
-                <div class="item-icon"><i class="fab fa-apple"></i></div>
-                <div class="item-details">
-                  <h4>iOS App Development</h4>
-                  <p>Native iOS applications with Swift and SwiftUI for iPhone and iPad devices.</p>
-                  <span class="item-tag">iOS</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fab fa-android"></i></div>
-                <div class="item-details">
-                  <h4>Android App Development</h4>
-                  <p>Native Android apps with Kotlin/Java optimized for all Android devices.</p>
-                  <span class="item-tag">Android</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-file-archive"></i></div>
-                <div class="item-details">
-                  <h4>APK & IPA Generation</h4>
-                  <p>Build and package apps with APK (Android) and IPA (iOS) files for deployment.</p>
-                  <span class="item-tag">Deployment</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-store"></i></div>
-                <div class="item-details">
-                  <h4>App Store & Play Store Submission</h4>
-                  <p>Complete guidance and support for publishing apps on Google Play and Apple App Store.</p>
-                  <span class="item-tag">Publishing</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-sync-alt"></i></div>
-                <div class="item-details">
-                  <h4>Cross-Platform Development</h4>
-                  <p>Build apps for both iOS and Android using Flutter, React Native, or Ionic.</p>
-                  <span class="item-tag">Hybrid</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-bell"></i></div>
-                <div class="item-details">
-                  <h4>Push Notifications & APIs</h4>
-                  <p>Implement push notifications, REST APIs, and real-time data synchronization.</p>
-                  <span class="item-tag">Features</span>
-                </div>
-              </div>
-            </div>
-            <div class="category-cta">
-              <a href="#contact" class="module-cta">Get App Development Quote <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 3: Research & Academic Support -->
-        <div class="category-card">
-          <div class="category-header" onclick="toggleCategory(this)">
-            <div class="category-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="category-info">
-              <h3>Research & Academic Support</h3>
-              <p>Comprehensive support for research and academic projects</p>
-            </div>
-            <div class="category-toggle">
-              <i class="fas fa-chevron-down"></i>
-            </div>
-          </div>
-          <div class="category-content">
-            <div class="service-items-grid research-grid">
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-lightbulb"></i></div>
-                <div class="item-details">
-                  <h4>Topic Selection</h4>
-                  <p>Expert guidance in identifying and selecting research topics aligned with your interests and
-                    academic requirements.</p>
-                  <span class="item-tag">Planning</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-file-alt"></i></div>
-                <div class="item-details">
-                  <h4>Research Proposal Writing</h4>
-                  <p>Professional research proposal development with clear objectives, methodology, and expected
-                    outcomes.</p>
-                  <span class="item-tag">Proposal</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-pen-fancy"></i></div>
-                <div class="item-details">
-                  <h4>Research Paper Writing</h4>
-                  <p>High-quality research paper writing with proper structure, citations, and academic standards.</p>
-                  <span class="item-tag">Writing</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-book-open"></i></div>
-                <div class="item-details">
-                  <h4>Literature Review</h4>
-                  <p>Comprehensive literature review covering relevant research, theories, and findings in your field.
-                  </p>
-                  <span class="item-tag">Review</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-book"></i></div>
-                <div class="item-details">
-                  <h4>Thesis Writing</h4>
-                  <p>Complete thesis writing support including chapters, references, appendices, and formatting.</p>
-                  <span class="item-tag">Thesis</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-list-ul"></i></div>
-                <div class="item-details">
-                  <h4>Synopsis Writing</h4>
-                  <p>Concise and compelling synopsis development for research proposals and project submissions.</p>
-                  <span class="item-tag">Synopsis</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-tasks"></i></div>
-                <div class="item-details">
-                  <h4>Assignment Writing</h4>
-                  <p>Professional assignment writing services across various subjects and academic levels.</p>
-                  <span class="item-tag">Assignment</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-code"></i></div>
-                <div class="item-details">
-                  <h4>Design & Development</h4>
-                  <p>Technical implementation and development support for research projects and prototypes.</p>
-                  <span class="item-tag">Development</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-spell-check"></i></div>
-                <div class="item-details">
-                  <h4>Proofreading Service</h4>
-                  <p>Thorough proofreading for grammar, spelling, punctuation, and academic formatting.</p>
-                  <span class="item-tag">Editing</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-edit"></i></div>
-                <div class="item-details">
-                  <h4>Correction Support</h4>
-                  <p>Comprehensive correction and revision support based on reviewer feedback and academic guidelines.
-                  </p>
-                  <span class="item-tag">Revision</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-journal-whills"></i></div>
-                <div class="item-details">
-                  <h4>Journal Publication</h4>
-                  <p>End-to-end support for journal publication including formatting, submission, and peer review
-                    process.</p>
-                  <span class="item-tag">Publication</span>
-                </div>
-              </div>
-            </div>
-            <div class="category-cta">
-              <a href="#contact" class="module-cta">Get Research Support Quote <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 4: AI & Automation -->
-        <div class="category-card">
-          <div class="category-header" onclick="toggleCategory(this)">
-            <div class="category-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-              <i class="fas fa-robot"></i>
-            </div>
-            <div class="category-info">
-              <h3>AI & Automation</h3>
-              <p>Intelligent automation and AI-powered solutions</p>
-            </div>
-            <div class="category-toggle">
-              <i class="fas fa-chevron-down"></i>
-            </div>
-          </div>
-          <div class="category-content">
-            <div class="service-items-grid">
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-brain"></i></div>
-                <div class="item-details">
-                  <h4>Machine Learning Models</h4>
-                  <p>Build and deploy ML models for prediction, classification, and pattern recognition.</p>
-                  <span class="item-tag">ML</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-comment-dots"></i></div>
-                <div class="item-details">
-                  <h4>AI Chatbots & Virtual Assistants</h4>
-                  <p>Intelligent chatbots with NLP for customer support, lead generation, and automation.</p>
-                  <span class="item-tag">Chatbots</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-chart-line"></i></div>
-                <div class="item-details">
-                  <h4>Predictive Analytics</h4>
-                  <p>Data-driven predictions and insights to optimize business decisions and operations.</p>
-                  <span class="item-tag">Analytics</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-eye"></i></div>
-                <div class="item-details">
-                  <h4>Computer Vision Solutions</h4>
-                  <p>Image recognition, object detection, and video analysis solutions for various applications.</p>
-                  <span class="item-tag">Vision</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-cogs"></i></div>
-                <div class="item-details">
-                  <h4>Business Process Automation</h4>
-                  <p>Automate repetitive tasks and workflows to improve efficiency and reduce costs.</p>
-                  <span class="item-tag">Automation</span>
-                </div>
-              </div>
-              <div class="service-item">
-                <div class="item-icon"><i class="fas fa-microchip"></i></div>
-                <div class="item-details">
-                  <h4>IoT & Robotics Integration</h4>
-                  <p>Connect devices and robots with intelligent systems for real-time monitoring and control.</p>
-                  <span class="item-tag">IoT</span>
-                </div>
-              </div>
-            </div>
-            <div class="category-cta">
-              <a href="#contact" class="module-cta">Get AI Solutions Quote <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Call to Action -->
-      <div class="services-cta">
-        <div class="cta-content">
-          <h3>Ready to <span>Transform</span> Your Business?</h3>
-          <p>Let's discuss how our technology solutions can help you achieve your goals.</p>
-        </div>
-        <a href="#contact" class="cta-button">
-          <i class="fas fa-rocket"></i> Start Your Project
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <style>
-    /* ----- SERVICES SECTION STYLES ----- */
-    .services-section {
-      padding: 80px 0;
-      background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* Section Header */
-    .section-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .section-tag {
-      display: inline-block;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(99, 102, 241, 0.1));
-      color: #2563eb;
-      padding: 8px 20px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      letter-spacing: 0.5px;
-      margin-bottom: 16px;
-    }
-
-    .section-tag i {
-      margin-right: 8px;
-    }
-
-    .section-header h2 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      color: #1e293b;
-      margin-bottom: 16px;
-      line-height: 1.2;
-    }
-
-    .section-header h2 .highlight {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .header-line {
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, #2563eb, #7c3aed);
-      border-radius: 4px;
-      margin: 0 auto 20px;
-    }
-
-    .section-header p {
-      color: #64748b;
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    /* Category Cards */
-    .service-categories {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-bottom: 50px;
-    }
-
-    .category-card {
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      border: 1px solid rgba(0, 0, 0, 0.04);
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .category-card:hover {
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    .category-header {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 24px 30px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      user-select: none;
-    }
-
-    .category-header:hover {
-      background: rgba(37, 99, 235, 0.03);
-    }
-
-    .category-icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      color: #fff;
-      flex-shrink: 0;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .category-info {
-      flex: 1;
-    }
-
-    .category-info h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #1e293b;
-      margin: 0 0 4px 0;
-    }
-
-    .category-info p {
-      font-size: 0.95rem;
-      color: #64748b;
-      margin: 0;
-    }
-
-    .category-toggle {
-      font-size: 1.2rem;
-      color: #94a3b8;
-      transition: transform 0.3s ease;
-    }
-
-    .category-card.active .category-toggle {
-      transform: rotate(180deg);
-    }
-
-    /* Category Content */
-    .category-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
-      padding: 0 30px;
-    }
-
-    .category-card.active .category-content {
-      max-height: 3000px;
-      padding: 0 30px 30px;
-    }
-
-    .service-items-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 16px;
-      padding: 10px 0 20px;
-    }
-
-    .research-grid {
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    }
-
-    .service-item {
-      display: flex;
-      gap: 16px;
-      padding: 16px 18px;
-      background: #f8faff;
-      border-radius: 14px;
-      border: 1px solid rgba(0, 0, 0, 0.03);
-      transition: all 0.3s ease;
-    }
-
-    .service-item:hover {
-      background: #f0f5ff;
-      border-color: rgba(37, 99, 235, 0.15);
-      transform: translateY(-2px);
-    }
-
-    .item-icon {
-      width: 42px;
-      height: 42px;
-      min-width: 42px;
-      background: rgba(37, 99, 235, 0.1);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #2563eb;
-      font-size: 1.1rem;
-    }
-
-    .item-details {
-      flex: 1;
-    }
-
-    .item-details h4 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #1e293b;
-      margin: 0 0 4px 0;
-    }
-
-    .item-details p {
-      font-size: 0.85rem;
-      color: #64748b;
-      margin: 0 0 6px 0;
-      line-height: 1.5;
-    }
-
-    .item-tag {
-      display: inline-block;
-      background: rgba(37, 99, 235, 0.08);
-      color: #2563eb;
-      padding: 2px 12px;
-      border-radius: 20px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-    }
-
-    .category-cta {
-      padding-top: 16px;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
-      text-align: center;
-    }
-
-    .module-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: #2563eb;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 10px 24px;
-      border-radius: 40px;
-      transition: all 0.3s ease;
-      background: rgba(37, 99, 235, 0.05);
-    }
-
-    .module-cta:hover {
-      background: rgba(37, 99, 235, 0.12);
-      transform: translateX(4px);
-    }
-
-    .module-cta i {
-      transition: transform 0.3s ease;
-    }
-
-    .module-cta:hover i {
-      transform: translateX(6px);
-    }
-
-    /* Services CTA */
-    .services-cta {
-      background: linear-gradient(135deg, #1e293b, #0b2b5c);
-      border-radius: 24px;
-      padding: 50px 60px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-      margin-top: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .services-cta::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -10%;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .cta-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-content h3 {
-      color: #ffffff;
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .cta-content h3 span {
-      background: linear-gradient(135deg, #60a5fa, #a78bfa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .cta-content p {
-      color: #94a3b8;
-      font-size: 1rem;
-      margin: 0;
-    }
-
-    .cta-button {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-      color: #fff;
-      padding: 16px 36px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 30px rgba(37, 99, 235, 0.3);
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 16px 40px rgba(37, 99, 235, 0.4);
-      color: #fff;
-    }
-
-    .cta-button i {
-      font-size: 1.1rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 992px) {
-      .section-header h2 {
-        font-size: 2.2rem;
-      }
-
-      .services-cta {
-        padding: 40px 35px;
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .services-section {
-        padding: 60px 0;
-      }
-
-      .section-header h2 {
-        font-size: 1.8rem;
-      }
-
-      .category-header {
-        padding: 18px 20px;
-        gap: 14px;
-      }
-
-      .category-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
-      }
-
-      .category-info h3 {
-        font-size: 1.1rem;
-      }
-
-      .category-content {
-        padding: 0 20px;
-      }
-
-      .category-card.active .category-content {
-        padding: 0 20px 20px;
-      }
-
-      .service-items-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .research-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-item {
-        padding: 14px 16px;
-      }
-
-      .services-cta {
-        padding: 30px 24px;
-      }
-
-      .cta-content h3 {
-        font-size: 1.4rem;
-      }
-
-      .cta-button {
-        padding: 14px 28px;
-        font-size: 0.95rem;
-      }
-    }
-  </style>
-
-  <script>
-    function toggleCategory(headerElement) {
-      const card = headerElement.closest('.category-card');
-      const isActive = card.classList.contains('active');
-
-      // Close all other categories
-      document.querySelectorAll('.category-card').forEach(c => {
-        c.classList.remove('active');
-      });
-
-      // Toggle clicked category
-      if (!isActive) {
-        card.classList.add('active');
-      }
-
-      // Smooth scroll to category
-      if (!isActive) {
-        setTimeout(() => {
-          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 100);
-      }
-    }
-
-    // Open first category by default
-    document.addEventListener('DOMContentLoaded', function () {
-      const firstCategory = document.querySelector('.category-card');
-      if (firstCategory) {
-        firstCategory.classList.add('active');
-      }
-    });
-  </script>
-
-  <!-- TESTIMONIALS (mini) -->
-  <div class="container" style="margin-top:70px;">
-    <div class="section-head">
-      <h2>What our <em>clients say</em></h2>
-      <div class="line"></div>
-    </div>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-            class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p>“The management software solution from Hafzee Infopark has been a game-changer for our business. With
-          seamless website integration, an intuitive admin panel, and real-time analytics at our fingertips, we now
-          manage our operations with unparalleled ease and efficiency. We highly recommend Hafzee
-          Infopark to any business looking to digitize and streamline their workflow. A heartfelt thank you to the
-          entire team!.”</p>
-        <div class="author"><img src="assets/images/p1.jpg" alt="avatar" />
-          <div>Mr. Saran owner of wholesale food business </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-            class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p>“Hafzee Infopark transformed our honey business with a stunning, user-friendly website. The seamless payment
-          integration, attractive product display, and smooth checkout process have significantly boosted our online
-          sales. Our customers love the easy shopping experience. We highly recommend Hafzee Infopark for any business
-          looking to go digital..”</p>
-        <div class="author"><img src="assets/images/p1.jpg" alt="avatar" />
-          <div>Mr. mohamed faalik founder of  honey business</div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-            class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p>Hafzee Infopark developed an exceptional AI prediction model for our loan management system. The model
-          accurately assesses loan applications, identifies suitable candidates, and reduces default risk significantly.
-          This intelligent solution has streamlined our decision-making process and improved our approval accuracy by
-          85%. We are extremely satisfied with their expertise in AI and machine learning."
-        </p>
-        <div class="author"><img src="assets/images/p2.jpg" alt="avatar" />
-          <div>Mr. Raja Founder of finance & Gold Loan company</div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-            class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p>Hafzee Infopark developed a powerful mobile app for our wholesale onion business. The Android and iOS apps
-          allow our customers to place orders seamlessly, track shipments in real-time, and receive instant
-          updates shipped, out for delivery, and delivered. This has transformed our business operations and customer
-          experience. We are extremely satisfied with their app development expertise!
-        </p>
-         <div class="author"><img src="assets/images/p2.jpg" alt="avatar" />
-          <div>Mr. Sam founder of onion selling company</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- FOOTER / NEWSLETTER -->
-  <footer class="footer-cta" id="contact">
-    <div class="container">
-      <!-- Enhanced CTA Section -->
-      <div class="cta-wrapper">
-        <div class="cta-text">
-          <span class="cta-badge"><i class="fas fa-sparkles"></i> Let's talk</span>
-          <h3>Ready to build something <br /><span class="highlight">innovative</span> together?</h3>
-          <p>Get a free quote or discuss your project with our experts.</p>
-          <div class="cta-stats">
-            <div><i class="fas fa-check-circle"></i> 50+ projects delivered</div>
-            <div><i class="fas fa-check-circle"></i> 4.9 ★ client rating</div>
-          </div>
-        </div>
-        <div class="cta-form">
-          <div class="form-group">
-            <i class="fas fa-envelope input-icon"></i>
-            <input type="email" placeholder="Enter your email address" />
-          </div>
-          <a href="#" class="btn-primary btn-glow">
-            <i class="fas fa-paper-plane"></i> Get a quote
-          </a>
-          <p class="form-note">We'll respond within 24 hours</p>
-        </div>
-      </div>
-
-      <!-- Enhanced Footer Links -->
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4><i class="fas fa-compass"></i> Company</h4>
-          <ul>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
-            <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-            <li><a href="#pricing"><i class="fas fa-chevron-right"></i> Pricing</a></li>
-            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4><i class="fas fa-cogs"></i> Solutions</h4>
-          <ul>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Web &amp; Apps</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> AI &amp; ML</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Research</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Automation</a></li>
-          </ul>
-        </div>
-        <div class="footer-col contact-col">
-          <h4><i class="fas fa-address-card"></i> Get in touch</h4>
-          <ul class="contact-list">
-            <li><i class="fas fa-phone-alt"></i> <a href="tel:+918754671568">+91 8754671568</a></li>
-            <li><i class="fas fa-envelope"></i> <a href="mailto:hafzeeinfopark@gmail.com">hafzeeinfopark@gmail.com</a>
-            </li>
-            <li><i class="fas fa-map-marker-alt"></i> India</li>
-            <!-- WhatsApp Integration -->
-            <li class="whatsapp-contact">
-              <i class="fab fa-whatsapp" style="color: #25D366;"></i>
-              <a href="https://wa.me/918754671568?text=Hi%20Hafzee%20Infopark%2C%20I%27m%20interested%20in%20your%20services"
-                target="_blank" style="color: #25D366; font-weight: 600;">
-                Chat on WhatsApp
-              </a>
-            </li>
-          </ul>
-          <div class="social-icons">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <!-- WhatsApp Social Icon -->
-            <a href="https://wa.me/918754671568?text=Hi%20Hafzee%20Infopark%2C%20I%27m%20interested%20in%20your%20services"
-              target="_blank" aria-label="WhatsApp" style="background: #25D366; color: #fff;">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Enhanced Bottom Bar -->
-      <div class="footer-bottom">
-        <p>© 2026 <strong>Hafzee Infopark</strong>. All rights reserved.</p>
-        <div class="bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Floating WhatsApp Button (Optional) -->
-    <a href="https://wa.me/918754671568?text=Hi%20Hafzee%20Infopark%2C%20I%27m%20interested%20in%20your%20services"
-      target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-  </footer>
-
-  <style>
-    /* ----- FOOTER ENHANCEMENT STYLES ----- */
-    .footer-cta {
-      background: linear-gradient(145deg, #0b1f3a, #0b2b5c);
-      color: #f1f5f9;
-      padding: 60px 0 30px;
-      border-radius: 48px 48px 0 0;
-      margin-top: 60px;
-      font-family: 'Inter', sans-serif;
-      position: relative;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* CTA Wrapper */
-    .cta-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(8px);
-      border-radius: 32px;
-      padding: 40px 48px;
-      margin-bottom: 50px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
-    }
-
-    .cta-text {
-      flex: 1 1 45%;
-    }
-
-    .cta-badge {
-      display: inline-block;
-      background: rgba(37, 99, 235, 0.2);
-      color: #60a5fa;
-      padding: 6px 18px;
-      border-radius: 60px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      margin-bottom: 12px;
-    }
-
-    .cta-text h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 10px;
-    }
-
-    .cta-text .highlight {
-      background: linear-gradient(135deg, #60a5fa, #2563eb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .cta-text p {
-      color: #94a3b8;
-      font-size: 1.05rem;
-      margin-bottom: 16px;
-    }
-
-    .cta-stats {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .cta-stats div {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.9rem;
-      color: #cbd5e1;
-    }
-
-    .cta-stats i {
-      color: #34d399;
-    }
-
-    .cta-form {
-      flex: 1 1 40%;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .form-group {
-      position: relative;
-      display: flex;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 60px;
-      padding: 0 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: 0.3s;
-    }
-
-    .form-group:focus-within {
-      border-color: #60a5fa;
-      background: rgba(255, 255, 255, 0.12);
-      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
-    }
-
-    .input-icon {
-      color: #94a3b8;
-      font-size: 1rem;
-    }
-
-    .form-group input {
-      background: transparent;
-      border: none;
-      padding: 16px 14px;
-      color: #f1f5f9;
-      font-size: 1rem;
-      width: 100%;
-      outline: none;
-    }
-
-    .form-group input::placeholder {
-      color: #94a3b8;
-    }
-
-    .btn-glow {
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: #fff;
-      padding: 14px 32px;
-      border-radius: 60px;
-      font-weight: 600;
-      text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
-      display: inline-block;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn-glow:hover {
-      transform: translateY(-3px) scale(1.01);
-      box-shadow: 0 16px 36px rgba(37, 99, 235, 0.5);
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
-      color: #fff;
-    }
-
-    .form-note {
-      font-size: 0.8rem;
-      color: #94a3b8;
-      text-align: center;
-      margin-top: 4px;
-    }
-
-    /* Footer Links */
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 50px;
-      padding: 30px 0 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .footer-col {
-      flex: 1 1 160px;
-    }
-
-    .footer-col h4 {
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #f1f5f9;
-    }
-
-    .footer-col h4 i {
-      color: #60a5fa;
-      font-size: 0.9rem;
-    }
-
-    .footer-col ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-col ul li {
-      margin: 10px 0;
-    }
-
-    .footer-col ul li a {
-      color: #cbd5e1;
-      transition: 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.95rem;
-      text-decoration: none;
-    }
-
-    .footer-col ul li a i {
-      font-size: 0.5rem;
-      color: #60a5fa;
-      transition: 0.2s;
-    }
-
-    .footer-col ul li a:hover {
-      color: #fff;
-    }
-
-    .footer-col ul li a:hover i {
-      transform: translateX(4px);
-    }
-
-    .contact-list li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: #cbd5e1;
-      padding: 6px 0;
-    }
-
-    .contact-list li i {
-      color: #60a5fa;
-      width: 20px;
-      font-size: 0.95rem;
-    }
-
-    .contact-list li a {
-      color: #cbd5e1;
-      text-decoration: none;
-    }
-
-    .contact-list li a:hover {
-      color: #fff;
-    }
-
-    /* WhatsApp Contact Styling */
-    .whatsapp-contact {
-      margin-top: 4px;
-    }
-
-    .whatsapp-contact i {
-      color: #25D366 !important;
-      font-size: 1.2rem;
-    }
-
-    .whatsapp-contact a {
-      color: #25D366 !important;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .whatsapp-contact a:hover {
-      color: #34d399 !important;
-      transform: scale(1.02);
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 14px;
-      margin-top: 18px;
-      flex-wrap: wrap;
-    }
-
-    .social-icons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.06);
-      color: #94a3b8;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .social-icons a:hover {
-      background: #2563eb;
-      color: #fff;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-    }
-
-    .social-icons a[aria-label="WhatsApp"]:hover {
-      background: #128C7E !important;
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-    }
-
-    /* Floating WhatsApp Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #25D366;
-      color: #fff;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
-      transition: all 0.3s ease;
-      z-index: 1000;
-      text-decoration: none;
-      animation: pulse 2s infinite;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1) translateY(-5px);
-      box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
-      color: #fff;
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
-      }
-
-      70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-      }
-
-      100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
-    }
-
-    /* Bottom Bar */
-    .footer-bottom {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 24px;
-      color: #94a3b8;
-      font-size: 0.9rem;
-      gap: 12px;
-    }
-
-    .footer-bottom p {
-      margin: 0;
-    }
-
-    .footer-bottom p strong {
-      color: #f1f5f9;
-    }
-
-    .bottom-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .bottom-links a {
-      color: #94a3b8;
-      text-decoration: none;
-      font-size: 0.85rem;
-      transition: 0.2s;
-    }
-
-    .bottom-links a:hover {
-      color: #fff;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .cta-wrapper {
-        flex-direction: column;
-        padding: 30px 24px;
-        text-align: center;
-      }
-
-      .cta-stats {
-        justify-content: center;
-      }
-
-      .cta-form {
-        width: 100%;
-      }
-
-      .footer-links {
-        gap: 30px;
-        flex-direction: column;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .bottom-links {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 1.6rem;
-        bottom: 20px;
-        right: 20px;
-      }
-    }
-  </style>
-
-  <style>
-    /* ----- FOOTER ENHANCEMENT STYLES ----- */
-    .footer-cta {
-      background: linear-gradient(145deg, #0b1f3a, #0b2b5c);
-      color: #f1f5f9;
-      padding: 60px 0 30px;
-      border-radius: 48px 48px 0 0;
-      margin-top: 60px;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* CTA Wrapper */
-    .cta-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(8px);
-      border-radius: 32px;
-      padding: 40px 48px;
-      margin-bottom: 50px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
-    }
-
-    .cta-text {
-      flex: 1 1 45%;
-    }
-
-    .cta-badge {
-      display: inline-block;
-      background: rgba(37, 99, 235, 0.2);
-      color: #60a5fa;
-      padding: 6px 18px;
-      border-radius: 60px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      margin-bottom: 12px;
-    }
-
-    .cta-text h3 {
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 10px;
-    }
-
-    .cta-text .highlight {
-      background: linear-gradient(135deg, #60a5fa, #2563eb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .cta-text p {
-      color: #94a3b8;
-      font-size: 1.05rem;
-      margin-bottom: 16px;
-    }
-
-    .cta-stats {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .cta-stats div {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.9rem;
-      color: #cbd5e1;
-    }
-
-    .cta-stats i {
-      color: #34d399;
-    }
-
-    .cta-form {
-      flex: 1 1 40%;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .form-group {
-      position: relative;
-      display: flex;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 60px;
-      padding: 0 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: 0.3s;
-    }
-
-    .form-group:focus-within {
-      border-color: #60a5fa;
-      background: rgba(255, 255, 255, 0.12);
-      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
-    }
-
-    .input-icon {
-      color: #94a3b8;
-      font-size: 1rem;
-    }
-
-    .form-group input {
-      background: transparent;
-      border: none;
-      padding: 16px 14px;
-      color: #f1f5f9;
-      font-size: 1rem;
-      width: 100%;
-      outline: none;
-    }
-
-    .form-group input::placeholder {
-      color: #94a3b8;
-    }
-
-    .btn-glow {
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: #fff;
-      padding: 14px 32px;
-      border-radius: 60px;
-      font-weight: 600;
-      text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
-      display: inline-block;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn-glow:hover {
-      transform: translateY(-3px) scale(1.01);
-      box-shadow: 0 16px 36px rgba(37, 99, 235, 0.5);
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
-      color: #fff;
-    }
-
-    .form-note {
-      font-size: 0.8rem;
-      color: #94a3b8;
-      text-align: center;
-      margin-top: 4px;
-    }
-
-    /* Footer Links */
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 50px;
-      padding: 30px 0 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .footer-col {
-      flex: 1 1 160px;
-    }
-
-    .footer-col h4 {
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #f1f5f9;
-    }
-
-    .footer-col h4 i {
-      color: #60a5fa;
-      font-size: 0.9rem;
-    }
-
-    .footer-col ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-col ul li {
-      margin: 10px 0;
-    }
-
-    .footer-col ul li a {
-      color: #cbd5e1;
-      transition: 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.95rem;
-      text-decoration: none;
-    }
-
-    .footer-col ul li a i {
-      font-size: 0.5rem;
-      color: #60a5fa;
-      transition: 0.2s;
-    }
-
-    .footer-col ul li a:hover {
-      color: #fff;
-    }
-
-    .footer-col ul li a:hover i {
-      transform: translateX(4px);
-    }
-
-    .contact-list li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: #cbd5e1;
-      padding: 6px 0;
-    }
-
-    .contact-list li i {
-      color: #60a5fa;
-      width: 20px;
-      font-size: 0.95rem;
-    }
-
-    .contact-list li a {
-      color: #cbd5e1;
-      text-decoration: none;
-    }
-
-    .contact-list li a:hover {
-      color: #fff;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .social-icons a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.06);
-      color: #94a3b8;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .social-icons a:hover {
-      background: #2563eb;
-      color: #fff;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-    }
-
-    /* Bottom Bar */
-    .footer-bottom {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 24px;
-      color: #94a3b8;
-      font-size: 0.9rem;
-      gap: 12px;
-    }
-
-    .footer-bottom p {
-      margin: 0;
-    }
-
-    .footer-bottom p strong {
-      color: #f1f5f9;
-    }
-
-    .bottom-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .bottom-links a {
-      color: #94a3b8;
-      text-decoration: none;
-      font-size: 0.85rem;
-      transition: 0.2s;
-    }
-
-    .bottom-links a:hover {
-      color: #fff;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .cta-wrapper {
-        flex-direction: column;
-        padding: 30px 24px;
-        text-align: center;
-      }
-
-      .cta-stats {
-        justify-content: center;
-      }
-
-      .cta-form {
-        width: 100%;
-      }
-
-      .footer-links {
-        gap: 30px;
-        flex-direction: column;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .bottom-links {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-  </style>
-  <script>
-    function toggleMobile() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
-    }
-    // close on link click (optional)
-    document.querySelectorAll('#mobileMenu a').forEach(link => {
-      link.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
-    });
-  </script>
+    </footer>
+
+    <script>
+        // ===== MOBILE MENU =====
+        function toggleMobile() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.querySelectorAll('#mobileMenu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // ===== CATEGORY ACCORDION =====
+        function toggleCategory(headerElement) {
+            var card = headerElement.closest('.category-card');
+            var isActive = card.classList.contains('active');
+
+            // Close all other categories
+            document.querySelectorAll('.category-card').forEach(function(c) {
+                c.classList.remove('active');
+            });
+
+            // Toggle clicked category
+            if (!isActive) {
+                card.classList.add('active');
+                // Smooth scroll to category on mobile
+                if (window.innerWidth <= 768) {
+                    setTimeout(function() {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 150);
+                }
+            }
+        }
+
+        // Open first category by default
+        document.addEventListener('DOMContentLoaded', function() {
+            var firstCategory = document.querySelector('.category-card');
+            if (firstCategory) {
+                firstCategory.classList.add('active');
+            }
+        });
+
+        // ===== CLOSE MOBILE MENU ON RESIZE =====
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                var menu = document.getElementById('mobileMenu');
+                if (menu) menu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 
 </html>
