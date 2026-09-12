@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Hafzee Infopark · IT Solutions & Software Company in Nagercoil</title>
     <!-- Google Fonts + Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,27 +17,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        /* ===== MOBILE-ONLY LAYOUT (max-width 480px) ===== */
-        html, body {
-            max-width: 480px;
-            margin: 0 auto;
-            background: #f9fcff;
-            touch-action: pan-y;
-            -webkit-user-select: none;
-            user-select: none;
-            -webkit-touch-callout: none;
-            overscroll-behavior: none;
-        }
-
-        /* Outer page background (visible on screens wider than 480px) */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background: #eef2f7;
-            z-index: -1;
         }
 
         html {
@@ -67,7 +45,7 @@
         }
 
         .container {
-            max-width: 480px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             width: 100%;
@@ -2384,40 +2362,6 @@
             if (window.innerWidth > 768) {
                 var menu = document.getElementById('mobileMenu');
                 if (menu) menu.classList.add('hidden');
-            }
-        });
-
-        // ===== BLOCK ZOOM (pinch, double-tap, gesture) =====
-        document.addEventListener('gesturestart', function (e) { e.preventDefault(); });
-        document.addEventListener('gesturechange', function (e) { e.preventDefault(); });
-        document.addEventListener('gestureend', function (e) { e.preventDefault(); });
-
-        // Block pinch-zoom (two-finger)
-        document.addEventListener('touchstart', function (e) {
-            if (e.touches.length > 1) e.preventDefault();
-        }, { passive: false });
-
-        document.addEventListener('touchmove', function (e) {
-            if (e.touches.length > 1) e.preventDefault();
-        }, { passive: false });
-
-        // Block double-tap zoom
-        let lastTouchEnd = 0;
-        document.addEventListener('touchend', function (e) {
-            const now = Date.now();
-            if (now - lastTouchEnd <= 300) e.preventDefault();
-            lastTouchEnd = now;
-        }, { passive: false });
-
-        // Block Ctrl + wheel zoom (desktop testing)
-        document.addEventListener('wheel', function (e) {
-            if (e.ctrlKey) e.preventDefault();
-        }, { passive: false });
-
-        // Block Ctrl + / Ctrl - / Ctrl 0
-        document.addEventListener('keydown', function (e) {
-            if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
-                e.preventDefault();
             }
         });
     </script>
